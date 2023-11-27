@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/macbookpro/lab1/build",
+  "command": "/usr/bin/clang++ -I/Users/macbookpro/lab1/include -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest/include -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wall -pedantic -o CMakeFiles/ut_all.dir/test/ut_Subject.cpp.o -c /Users/macbookpro/lab1/test/ut_Subject.cpp",
+  "file": "/Users/macbookpro/lab1/test/ut_Subject.cpp",
+  "output": "CMakeFiles/ut_all.dir/test/ut_Subject.cpp.o"
+},
+{
+  "directory": "/Users/macbookpro/lab1/build",
+  "command": "/usr/bin/clang++ -I/Users/macbookpro/lab1/build/_deps/googletest-src/googlemock/include -I/Users/macbookpro/lab1/build/_deps/googletest-src/googlemock -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest/include -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15  -DGTEST_HAS_PTHREAD=1   -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/macbookpro/lab1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/macbookpro/lab1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/macbookpro/lab1/build",
+  "command": "/usr/bin/clang++ -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googlemock/include -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googlemock -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest/include -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15  -DGTEST_HAS_PTHREAD=1   -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/macbookpro/lab1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/macbookpro/lab1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/macbookpro/lab1/build",
+  "command": "/usr/bin/clang++ -I/Users/macbookpro/lab1/build/_deps/googletest-src/googletest/include -I/Users/macbookpro/lab1/build/_deps/googletest-src/googletest -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15  -DGTEST_HAS_PTHREAD=1   -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/macbookpro/lab1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/macbookpro/lab1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/macbookpro/lab1/build",
+  "command": "/usr/bin/clang++ -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest/include -isystem /Users/macbookpro/lab1/build/_deps/googletest-src/googletest -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15  -DGTEST_HAS_PTHREAD=1   -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/macbookpro/lab1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/macbookpro/lab1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]
