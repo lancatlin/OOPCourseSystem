@@ -1,5 +1,0 @@
-if(EXISTS "/Users/macbookpro/lab1/build/ut_all[1]_tests.cmake")
-  include("/Users/macbookpro/lab1/build/ut_all[1]_tests.cmake")
-else()
-  add_test(ut_all_NOT_BUILT ut_all_NOT_BUILT)
-endif()
