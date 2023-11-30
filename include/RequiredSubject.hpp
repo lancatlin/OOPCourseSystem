@@ -8,7 +8,7 @@ class RequiredSubject : public Subject {
 private:
 public:
   RequiredSubject(std::string name, std::set<int> time)
-      : Subject(name, time, "Required Subject") {}
+      : Subject(name, time, "Required") {}
 };
 
 #endif // OOP_REQUIREDSUBJECT_HPP

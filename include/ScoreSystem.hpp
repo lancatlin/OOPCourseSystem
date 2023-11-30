@@ -6,6 +6,7 @@
 #include <memory>
 #include <set>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 class ScoreSystem {
@@ -24,6 +25,8 @@ public:
   int GetSize() const { return courses.size(); };
 
   std::vector<std::shared_ptr<Subject>> GetCourses() const;
+
+  std::unordered_map<std::string, int> CalculateCredits() const;
 
   void Print();
 

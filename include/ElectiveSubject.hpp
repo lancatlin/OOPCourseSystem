@@ -9,7 +9,7 @@ class ElectiveSubject : public Subject {
 private:
 public:
   ElectiveSubject(std::string name, std::set<int> time)
-      : Subject(name, time, "Elective Subject") {}
+      : Subject(name, time, "Elective") {}
 };
 
 #endif // OOP_ELECTIVESUBJECT_HPP

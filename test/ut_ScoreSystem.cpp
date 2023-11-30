@@ -6,6 +6,8 @@
 #include <memory>
 #include <set>
 #include <stdexcept>
+#include <string>
+#include <unordered_map>
 
 TEST(ScoreSystem, InitScoreSystemSuccess) {
   ScoreSystem scoreSystem;
@@ -25,4 +27,16 @@ TEST(ScoreSystem, InitScoreSystemConflict) {
                , std::invalid_argument);
 
   ASSERT_EQ(scoreSystem.GetSize(), 1);
+}
+
+TEST(ScoreSystem, CalculateCredits) {
+  ScoreSystem scoreSystem;
+  scoreSystem.AddCourse(std::make_shared<RequiredSubject>(
+      "Object Oriented Programming", std::set({15, 20, 31})));
+  scoreSystem.AddCourse(
+      std::make_shared<ElectiveSubject>("Linear Algebra", std::set({1, 2})));
+
+  std::unordered_map<std::string, int> credits = scoreSystem.CalculateCredits();
+  ASSERT_EQ(credits["Required"], 3);
+  ASSERT_EQ(credits["Elective"], 2);
 }

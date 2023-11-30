@@ -1,5 +1,7 @@
 #include "ScoreSystem.hpp"
+#include "Subject.hpp"
 #include <iostream>
+#include <memory>
 #include <set>
 #include <stdexcept>
 
@@ -54,6 +56,14 @@ std::set<int> ScoreSystem::GetEmptyCourses() const {
 
 std::vector<std::shared_ptr<Subject>> ScoreSystem::GetCourses() const {
   return this->courses;
+};
+
+std::unordered_map<std::string, int> ScoreSystem::CalculateCredits() const {
+  std::unordered_map<std::string, int> credits;
+  for (std::shared_ptr<Subject> course : courses) {
+    credits[course->GetType()] += course->GetCredits();
+  }
+  return credits;
 };
 
 void ScoreSystem::Print(){};

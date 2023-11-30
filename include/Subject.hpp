@@ -16,5 +16,6 @@ public:
   std::set<int> GetTime() const { return time; };
   std::string GetName() const { return name; };
   std::string GetType() { return type; }
+  int GetCredits() const { return time.size(); };
 };
 #endif
