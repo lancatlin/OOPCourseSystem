@@ -2,29 +2,31 @@
 #define scoresystem_hpp
 
 #include "Subject.hpp"
-#include <memory>
 #include <algorithm>
+#include <memory>
 #include <set>
 #include <string>
 #include <vector>
 
 class ScoreSystem {
 private:
-    std::set<int> EmptyCourses;//剩餘空堂的集合
-    std::vector<std::shared_ptr<Subject>> Courses;//已加入的課程
+  std::set<int> emptyCourses;                    // 剩餘空堂的集合
+  std::vector<std::shared_ptr<Subject>> courses; // 已加入的課程
 
 public:
-    ScoreSystem();
+  ScoreSystem();
 
-    void AddCourse(const std::shared_ptr<Subject>& NewCourse);
+  void AddCourse(std::shared_ptr<Subject> NewCourse);
 
-    std::set<int> getEmptyCourses() const;
+  std::set<int> GetEmptyCourses() const;
 
-    std::vector<std::shared_ptr<Subject>> getCourses() const;
+  int GetSize() const { return courses.size(); };
 
-    void Print();
+  std::vector<std::shared_ptr<Subject>> GetCourses() const;
 
-    ~ScoreSystem();
+  void Print();
+
+  ~ScoreSystem();
 };
 
 #endif
