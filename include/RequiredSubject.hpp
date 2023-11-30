@@ -6,13 +6,9 @@
 
 class RequiredSubject : public Subject {
 private:
-    std::string type = "Required Subject";
 public:
-    RequiredSubject(std::string name, std::set<int> time) : Subject(name, time) {}
-    std::string GetType()  {
-        return type;
-    }
-
+  RequiredSubject(std::string name, std::set<int> time)
+      : Subject(name, time, "Required Subject") {}
 };
 
 #endif // OOP_REQUIREDSUBJECT_HPP
