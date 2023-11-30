@@ -5,19 +5,12 @@
 
 #define MaxTime 45
 
-/*std::set<int> setinter(std::set<int> a, std::set<int> b) {//交集
-    std::set<int> r;
-    std::set_intersection(a.begin(), a.end(), b.begin(), b.end(),
-        std::inserter(r, r.begin()));
-    return r;
-}*/
-
-/*std::set<int> setunion(std::set<int> a, std::set<int> b) {//聯集
-    std::set<int> r;
-    std::set_union(a.begin(), a.end(), b.begin(), b.end(),
-        std::inserter(r, r.begin()));
-    return r;
-}*/
+std::set<int> setinter(std::set<int> a, std::set<int> b) { // 交集
+  std::set<int> r;
+  std::set_intersection(a.begin(), a.end(), b.begin(), b.end(),
+                        std::inserter(r, r.begin()));
+  return r;
+}
 
 std::set<int> setdiff(std::set<int> a, std::set<int> b) { // 差集
   std::set<int> r;
@@ -45,21 +38,14 @@ ScoreSystem::ScoreSystem() {
     this->emptyCourses.insert(i);
 };
 
-void ScoreSystem::AddCourse(std::shared_ptr<Subject> NewCourse) {
-  if (issubset(
-          emptyCourses,
-          NewCourse
-              ->GetTime())) { // 加入的課程的時間是否為空堂的子集合，是代表沒有衝堂
-    courses.push_back(NewCourse); // 加入課程
-    emptyCourses = setdiff(
-        emptyCourses, NewCourse->GetTime()); // 把課程的時間從空堂中移除(差集)
-    printf("\"%s\" added successfully !\n", NewCourse->GetName().c_str());
-  } else {
-    outputSet(setdiff(NewCourse->GetTime(), emptyCourses));
-
-    throw std::invalid_argument("Can't add " + NewCourse->GetName() +
-                                " ! Course clash with:\n");
+void ScoreSystem::AddCourse(std::shared_ptr<Subject> course) {
+  std::set<int> time = course->GetTime();
+  std::set<int> inter = setinter(courseHours, time);
+  if (!inter.empty()) {
+    throw std::invalid_argument("Course time conflicts");
   }
+  courses.push_back(course);
+  courseHours.insert(time.begin(), time.end());
 };
 
 std::set<int> ScoreSystem::GetEmptyCourses() const {

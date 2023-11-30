@@ -11,6 +11,7 @@
 class ScoreSystem {
 private:
   std::set<int> emptyCourses;                    // 剩餘空堂的集合
+  std::set<int> courseHours;                     // 剩餘空堂的集合
   std::vector<std::shared_ptr<Subject>> courses; // 已加入的課程
 
 public:
