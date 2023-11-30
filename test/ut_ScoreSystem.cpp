@@ -1,12 +1,16 @@
-#include "ScoreSystem.hpp"
 #include "ElectiveSubject.hpp"
 #include "RequiredSubject.hpp"
+#include "ScoreSystem.hpp"
+#include "Subject.hpp"
 #include <gtest/gtest.h>
+#include <memory>
+#include <set>
 
-TEST(ScroeSysyem, InitScroeSysyemSuccess) {
-    ScoreSystem scoreSystem;
-    scoreSystem.AddCourse(std::shared_ptr<Subject>(new RequiredSubject("Object Oriented Programming", {15, 20, 31})));
-//    scoreSystem.AddCourse(std::shared_ptr<Subject>(new RequiredSubject("Data Structure", {11, 16, 32})));
-//    scoreSystem.AddCourse(std::shared_ptr<Subject>(new ElectiveSubject("Network Programming", {23, 28, 33})));
-    ASSERT_EQ(scoreSystem.getCourses(),std::vector<Subject>{"Object Oriented Programming", {15, 20, 31}});
+TEST(ScoreSystem, InitScoreSystemSuccess) {
+  ScoreSystem scoreSystem;
+  std::shared_ptr<Subject> s1 = std::make_shared<RequiredSubject>(
+      "Object Oriented Programming", std::set({15, 20, 31}));
+  scoreSystem.AddCourse(s1);
+  ASSERT_EQ(scoreSystem.getCourses(),
+            std::vector<std::shared_ptr<Subject>>{s1});
 }
