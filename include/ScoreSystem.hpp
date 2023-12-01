@@ -15,7 +15,7 @@ private:
   std::vector<std::shared_ptr<Subject>> courses;
 
 public:
-  ScoreSystem();
+  ScoreSystem() {};
 
   void AddCourse(std::shared_ptr<Subject> NewCourse);
 

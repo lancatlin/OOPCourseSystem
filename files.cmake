@@ -3,13 +3,13 @@ set(SRC_FILES
 )
 
 set(INCLUDE_FILES
-        ElectiveSubject.hpp
-        RequiredSubject.hpp
+    ElectiveSubject.hpp
+    RequiredSubject.hpp
     Subject.hpp
-        ScoreSystem.hpp
+    ScoreSystem.hpp
 )
 
 set(TEST_FILES
     ut_Subject.cpp
-        ut_ScoreSystem.cpp
+    ut_ScoreSystem.cpp
 )
